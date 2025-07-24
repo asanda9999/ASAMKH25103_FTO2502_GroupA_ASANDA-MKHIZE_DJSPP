@@ -1,0 +1,96 @@
+:root {
+  --grey-text: #555;
+  --dark-bg: #181f2a;
+  --dark-bg-secondary: #232b39;
+  --dark-card: #232b39;
+  --dark-border: #2d3748;
+  --dark-text: #e2e8f0;
+  --dark-text-secondary: #a0aec0;
+  --dark-accent: #2563eb;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+}
+
+body.dark-theme {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-theme .mainContainer,
+body.dark-theme .favourites-page,
+body.dark-theme .podcast-detail-container {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-theme .card,
+body.dark-theme .podcast-detail-episode-card,
+body.dark-theme .podcast-detail-header,
+body.dark-theme .podcast-detail-season-details {
+  background: var(--dark-card) !important;
+  color: var(--dark-text);
+  border: 1px solid var(--dark-border);
+}
+
+body.dark-theme .podcast-detail-episode-badge {
+  background: var(--dark-bg-secondary);
+  color: var(--dark-text);
+}
+
+body.dark-theme .podcast-detail-episode-description,
+body.dark-theme .podcast-detail-season-description,
+body.dark-theme .podcast-detail-episode-meta,
+body.dark-theme .updatedText {
+  color: var(--dark-text-secondary);
+}
+
+body.dark-theme .tag,
+body.dark-theme .podcast-detail-genre-badge {
+  background: var(--dark-bg-secondary);
+  color: var(--dark-text-secondary);
+}
+
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme button {
+  background: var(--dark-bg-secondary);
+  color: var(--dark-text);
+  border: 1px solid var(--dark-border);
+}
+
+body.dark-theme .sectionSpacing {
+  background: none;
+}
+
+body.dark-theme .podcast-detail-season-cover {
+  background: var(--dark-bg-secondary);
+  color: var(--dark-text);
+}
+
+body.dark-theme .podcast-detail-no-episodes {
+  color: var(--dark-text-secondary);
+}
+
+body.dark-theme .appHeader {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+
+
+body.dark-theme .card .updatedText,
+body.dark-theme .updatedText {
+  color: #fff !important;
+}
+
+body.dark-theme .podcast-detail-description,
+body.dark-theme .podcast-detail-stat-label {
+  color: #fff !important;
+}
+
+.dark-theme .card .seasons { color: #fff !important; }
+

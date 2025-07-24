@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { PodcastContext } from "../context/PodcastContextInstance";
-import styles from "./SearchBar.module.css";
+import styles from "../styles/SearchBar.module.css";
 
 /**
  * Search input with debounced update.
