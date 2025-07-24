@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  min-height: 400px;
+}
+
+.noResults {
+  padding: 2rem;
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}

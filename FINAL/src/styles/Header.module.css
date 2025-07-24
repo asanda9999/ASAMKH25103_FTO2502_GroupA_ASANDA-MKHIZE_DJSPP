@@ -1,0 +1,52 @@
+.appHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: none;
+  color: #222;
+  font-size: 1.7rem;
+  margin-right: 16px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  transition: color 0.2s;
+}
+.backButton svg {
+  width: 32px;
+  height: 32px;
+  stroke: #222;
+  transition: stroke 0.2s;
+}
+.backButton:hover svg,
+.backButton:focus svg {
+  stroke: #888;
+}
+.backButton:hover, .backButton:focus {
+  background: none;
+  color: #222;
+  border: none;
+}
+
+.appHeader h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+:global(body.dark-theme) .appHeader {
+  background: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
