@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { isFavourite, toggleFavourite } from "../utils/favourites";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
-export default function FavouriteButton({ episodeKey }) {
+export default function FavouriteButton({ episodeKey, onToggle }) {
   const [favourite, setFavourite] = useState(isFavourite(episodeKey));
 
   useEffect(() => {
@@ -12,6 +12,7 @@ export default function FavouriteButton({ episodeKey }) {
   const handleToggle = () => {
     toggleFavourite(episodeKey);
     setFavourite(isFavourite(episodeKey));
+    if (onToggle) onToggle();
   };
 
   return (

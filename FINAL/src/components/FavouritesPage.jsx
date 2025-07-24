@@ -10,7 +10,9 @@ export default function FavouritesPage() {
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  // Extract fetching logic into a function so it can be called on refresh
+  const fetchFavourites = () => {
+    setLoading(true);
     const favKeys = getFavourites();
     if (favKeys.length === 0) {
       setEpisodes([]);
@@ -58,6 +60,10 @@ export default function FavouritesPage() {
       setEpisodes(results.filter(r => r.episodes.length > 0));
       setLoading(false);
     });
+  };
+
+  useEffect(() => {
+    fetchFavourites();
   }, []);
 
   if (loading) return (
@@ -112,7 +118,7 @@ export default function FavouritesPage() {
               <div key={key} style={{ background: "#fff", borderRadius: 8, padding: 16, margin: "12px 0", display: "flex", alignItems: "center", position: 'relative' }}>
                 {/* Heart icon in top right */}
                 <div style={{ position: 'absolute', top: 12, right: 16, zIndex: 2 }}>
-                  <FavouriteButton episodeKey={key} />
+                  <FavouriteButton episodeKey={key} onToggle={fetchFavourites} />
                 </div>
                 <div style={{ width: 60, height: 60, background: "#eee", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16 }}>
                   {group.podcastImage ? <img src={group.podcastImage} alt="cover" style={{ width: 56, height: 56, borderRadius: 6, objectFit: 'cover' }} /> : 'Cover'}
