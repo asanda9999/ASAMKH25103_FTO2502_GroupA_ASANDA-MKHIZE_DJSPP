@@ -113,6 +113,10 @@ body.dark-theme .podcast-detail-stat-label {
   color: #888;
 }
 
+body.dark-theme .podcast-detail-season-meta {
+  color: #fff;
+}
+
 .podcast-detail-episode-card {
   display: flex;
   gap: 16px;
@@ -157,4 +161,8 @@ body.dark-theme .podcast-detail-stat-label {
 }
 .podcast-detail-no-episodes {
   color: #888;
+}
+
+body.dark-theme .podcast-detail-episode-description {
+  color: #fff;
 } 

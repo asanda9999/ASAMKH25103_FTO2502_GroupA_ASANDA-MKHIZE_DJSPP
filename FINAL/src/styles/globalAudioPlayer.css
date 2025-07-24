@@ -1,0 +1,37 @@
+/* GlobalAudioPlayer styles */
+
+.global-audio-player {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+.global-audio-player-row {
+  display: flex;
+  align-items: center;
+}
+
+.global-audio-player-image {
+  width: 56px;
+  height: 56px;
+  background: #ccc;
+  border-radius: 8px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-audio-player-image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.global-audio-player-content {
+  flex: 1;
+} 

@@ -18,6 +18,7 @@ export default function EpisodeCard({ ep, idx, currentSeason, podcastId, podcast
       episode: ep,
       podcast: { id: podcastId, title: podcastTitle },
       audioUrl: ep.file,
+      image: ep.image || currentSeason.image, // episode image first, then season image
     });
   };
 
