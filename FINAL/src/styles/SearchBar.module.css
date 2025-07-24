@@ -12,3 +12,11 @@
     width: 50%;
   }
 }
+
+@media (max-width: 768px) {
+  .searchInput {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.5rem;
+  }
+}

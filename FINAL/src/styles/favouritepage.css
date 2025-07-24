@@ -116,43 +116,40 @@
   margin: 4px 0;
 }
 
-body.dark-theme .favourites-episode-card {
-  background: #232b36;
+@media (max-width: 768px) {
+  .favourites-page {
+    padding: 10px;
+    margin: 0.5rem;
+  }
+  .favourites-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .favourites-group-header {
+    font-size: 18px;
+  }
+  .favourites-group-header img {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+  }
+  .favourites-episode-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .favourites-episode-image {
+    width: 48px;
+    height: 48px;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .favourites-episode-image img {
+    width: 44px;
+    height: 44px;
+  }
+  .favourites-episode-title-main {
+    font-size: 15px;
+  }
 }
-
-body.dark-theme .favourites-episode-description {
-  color: #fff;
-}
-
-body.dark-theme .favourites-episode-season {
-  color: #fff;
-}
-
-body.dark-theme .favourites-group-count {
-  color: #fff;
-} 
-
-body.dark-theme .rhap_container {
-  background: #232b36;
-  color: #fff;
-}
-body.dark-theme .rhap_time, 
-body.dark-theme .rhap_current-time, 
-body.dark-theme .rhap_total-time {
-  color: #fff;
-}
-body.dark-theme .rhap_progress-indicator, 
-body.dark-theme .rhap_progress-filled {
-  background: #888;
-}
-body.dark-theme .rhap_progress-bar {
-  background: #444;
-}
-body.dark-theme .rhap_main-controls-button, 
-body.dark-theme .rhap_volume-button {
-  background: #232b36;
-  color: #fff;
-}
-body.dark-theme .rhap_header {
-  color: #fff;
-} 

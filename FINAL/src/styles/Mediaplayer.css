@@ -1,0 +1,52 @@
+
+body.dark-theme .favourites-episode-card {
+    background: #232b36;
+  }
+  
+  body.dark-theme .favourites-episode-description {
+    color: #fff;
+  }
+  
+  body.dark-theme .favourites-episode-season {
+    color: #fff;
+  }
+  
+  body.dark-theme .favourites-group-count {
+    color: #fff;
+  } 
+  
+  body.dark-theme .rhap_container {
+    background: #232b36;
+    color: #fff;
+  }
+  body.dark-theme .rhap_time, 
+  body.dark-theme .rhap_current-time, 
+  body.dark-theme .rhap_total-time {
+    color: #fff;
+  }
+  body.dark-theme .rhap_progress-indicator, 
+  body.dark-theme .rhap_progress-filled {
+    background: #888;
+  }
+  body.dark-theme .rhap_progress-bar {
+    background: #444;
+  }
+  body.dark-theme .rhap_main-controls-button, 
+  body.dark-theme .rhap_volume-button {
+    background: #232b36;
+    color: #fff;
+  }
+  body.dark-theme .rhap_header {
+    color: #fff;
+  } 
+
+@media (max-width: 768px) {
+  .favourites-episode-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .rhap_container {
+    padding: 8px;
+  }
+} 

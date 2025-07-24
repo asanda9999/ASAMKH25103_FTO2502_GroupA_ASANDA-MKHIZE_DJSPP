@@ -94,3 +94,32 @@ body.dark-theme .podcast-detail-stat-label {
 
 .dark-theme .card .seasons { color: #fff !important; }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  .mainContainer,
+  .favourites-page,
+  .podcast-detail-container {
+    padding: 10px !important;
+    margin: 0.5rem !important;
+  }
+  .card {
+    padding: 0.7rem 0.5rem !important;
+  }
+  .podcast-detail-header,
+  .podcast-detail-season-details {
+    padding: 10px !important;
+  }
+  .podcast-detail-cover {
+    width: 120px !important;
+    height: 120px !important;
+    font-size: 14px !important;
+  }
+  .podcast-detail-episode-card {
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+}
+

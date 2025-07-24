@@ -17,3 +17,14 @@
   background-color: #2563eb;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .paginationWrapper {
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+  .pageButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.5rem;
+  }
+}

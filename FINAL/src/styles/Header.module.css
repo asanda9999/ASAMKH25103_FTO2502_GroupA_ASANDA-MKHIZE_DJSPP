@@ -50,3 +50,24 @@
   background: var(--dark-bg) !important;
   color: var(--dark-text) !important;
 }
+
+@media (max-width: 768px) {
+  .appHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 8px;
+  }
+  .backButton {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+  .backButton svg {
+    width: 24px;
+    height: 24px;
+  }
+  .appHeader h1 {
+    font-size: 1.2rem;
+  }
+}

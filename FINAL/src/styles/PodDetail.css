@@ -165,4 +165,77 @@ body.dark-theme .podcast-detail-season-meta {
 
 body.dark-theme .podcast-detail-episode-description {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .podcast-detail-container {
+    padding: 10px;
+    margin: 0.5rem;
+  }
+  .podcast-detail-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+  .podcast-detail-cover {
+    width: 120px;
+    height: 120px;
+    font-size: 14px;
+  }
+  .podcast-detail-header-info {
+    margin-top: 10px;
+  }
+  .podcast-detail-genres {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .podcast-detail-genre-badge {
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+  .podcast-detail-stats {
+    gap: 16px;
+    font-size: 13px;
+  }
+  .podcast-detail-season-selector-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .podcast-detail-season-details {
+    padding: 12px;
+  }
+  .podcast-detail-season-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+  .podcast-detail-season-cover {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+  .podcast-detail-episode-card {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+  .podcast-detail-episode-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  .podcast-detail-episode-title {
+    font-size: 14px;
+  }
+  .podcast-detail-episode-description {
+    font-size: 12px;
+  }
+  .podcast-detail-episode-meta {
+    font-size: 11px;
+  }
+  .podcast-detail-episode-number {
+    font-size: 12px;
+    margin-right: 4px;
+  }
 } 
