@@ -18,6 +18,23 @@
   color: white;
 }
 
+body.dark-theme .active {
+  background-color: #2563EB !important;
+  color: white !important;
+}
+
+body.dark-theme .pageButton.active {
+  background-color: #2563EB !important;
+  color: white !important;
+}
+
+:global(body.dark-theme) .pageButton:global(.active) {
+  background: #2563EB !important;
+  background-color: #2563EB !important;
+  color: white !important;
+  border: none !important;
+}
+
 @media (max-width: 768px) {
   .paginationWrapper {
     gap: 0.25rem;

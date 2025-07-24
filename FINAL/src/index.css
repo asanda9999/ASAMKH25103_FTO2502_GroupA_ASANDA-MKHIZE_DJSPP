@@ -92,6 +92,17 @@ body.dark-theme .podcast-detail-stat-label {
   color: #fff !important;
 }
 
+body.dark-theme .pageButton.active {
+  background-color: #2563EB !important;
+  color: white !important;
+}
+
+body.dark-theme button.pageButton.active {
+  background-color: #2563EB !important;
+  color: white !important;
+  border: none !important;
+}
+
 .dark-theme .card .seasons { color: #fff !important; }
 
 @media (max-width: 768px) {
