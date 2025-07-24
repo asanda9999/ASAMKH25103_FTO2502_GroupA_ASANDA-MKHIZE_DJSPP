@@ -1,0 +1,117 @@
+/* FavouritesPage styles */
+
+.favourites-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 24px;
+}
+
+.favourites-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.favourites-sort-label {
+  margin-right: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.favourites-select {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.favourites-group {
+  margin-bottom: 32px;
+}
+
+.favourites-group-header {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.favourites-group-header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+.favourites-group-count {
+  color: #888;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.favourites-episode-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.favourites-episode-heart {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 2;
+}
+
+.favourites-episode-image {
+  width: 60px;
+  height: 60px;
+  background: #eee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.favourites-episode-image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.favourites-episode-info {
+  flex: 1;
+}
+
+.favourites-episode-title {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.favourites-episode-title-main {
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 6px;
+}
+
+.favourites-episode-season {
+  color: #888;
+  font-size: 14px;
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.favourites-episode-description {
+  color: #888;
+  font-size: 14px;
+  margin: 4px 0;
+} 
