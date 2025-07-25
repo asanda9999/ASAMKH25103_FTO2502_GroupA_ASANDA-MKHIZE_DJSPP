@@ -104,9 +104,9 @@ ASAMKH25103_FTO2502_GroupA_ASANDA-MKHIZE_DJSPP/
 
 ## 🌐 Live Demo
 
-Add your live demo link here:
+ live demo link here:
 
-[Live Demo](#)
+[https://asamkh-25103-fto-2502-group-a-asanda-mkhize-djspp-5k13xc6xi.vercel.app/](#)
 
 ---
 
@@ -137,11 +137,7 @@ Here are some example usage scenarios to help you get started:
 
 ---
 
-#### Screenshots / GIFs
 
-> _Add screenshots or GIFs here to showcase the app in action!_
-
----
 
 ## 📄 License
 
