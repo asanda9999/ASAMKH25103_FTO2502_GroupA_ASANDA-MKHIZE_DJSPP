@@ -8,12 +8,13 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import '../styles/favouritepage.css';
 
 export default function FavouritesPage() {
+  // State for favourite episodes, loading, sort order, and show filter
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sortOrder, setSortOrder] = useState("newest"); // default to 'Newest Added'
   const [showFilter, setShowFilter] = useState("all"); // 'all' or podcastId
 
-  // Extract fetching logic into a function so it can be called on refresh
+  // Fetch and group favourites by podcastId
   const fetchFavourites = () => {
     setLoading(true);
     const favKeys = getFavourites();
@@ -33,7 +34,7 @@ export default function FavouritesPage() {
       podcastMap[podcastId].push({ seasonNum, episodeNum, key: fav.key, added: fav.added });
     });
 
-    // Fetch all podcasts in parallel
+    // Fetch all podcasts in parallel and map to favourite episodes
     Promise.all(
       Object.keys(podcastMap).map(podcastId =>
         fetch(`https://podcast-api.netlify.app/id/${podcastId}`)
@@ -69,6 +70,7 @@ export default function FavouritesPage() {
     });
   };
 
+  // Fetch favourites on mount
   useEffect(() => {
     fetchFavourites();
   }, []);

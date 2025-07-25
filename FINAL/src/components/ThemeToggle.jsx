@@ -1,12 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 
 export default function ThemeToggle() {
+  // State to track if dark theme is active
   const [isDark, setIsDark] = useState(false);
 
+  // On mount, set state based on body class
   useEffect(() => {
     setIsDark(document.body.classList.contains("dark-theme"));
   }, []);
 
+  // Handler to toggle theme and update state
   const handleThemeToggle = useCallback(() => {
     if (document.body.classList.contains("dark-theme")) {
       document.body.classList.remove("dark-theme");
@@ -26,6 +29,7 @@ export default function ThemeToggle() {
       style={{ marginRight: 24, background: 'none', border: 'none', cursor: 'pointer' }}
       onClick={handleThemeToggle}
     >
+      {/* Show sun icon for light mode, moon/within icon for dark mode */}
       {isDark ? (
         // Sun SVG for light mode
         <svg width="1.8em" height="1.8em" viewBox="0 0 24 24" fill="currentColor">

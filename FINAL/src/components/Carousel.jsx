@@ -5,10 +5,12 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import PodcastCard from './PodcastCard';
 
 export default function Carousel({ podcasts, genres, title = 'Recommended Shows' }) {
+  // If no podcasts, render nothing
   if (!podcasts?.length) return null;
   return (
     <section style={{ margin: '2rem 0' }}>
       <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>{title}</h2>
+      {/* Swiper carousel for recommended shows */}
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation
@@ -23,6 +25,7 @@ export default function Carousel({ podcasts, genres, title = 'Recommended Shows'
         }}
         style={{ padding: '1rem 0' }}
       >
+        {/* Render a PodcastCard in each SwiperSlide */}
         {podcasts.map((podcast) => (
           <SwiperSlide key={podcast.id}>
             <PodcastCard podcast={podcast} genres={genres} />

@@ -29,6 +29,7 @@ export default function SeasonDetails({ currentSeason, episodes, podcastId }) {
           <EpisodeCard key={ep.id || idx} ep={ep} idx={idx} currentSeason={currentSeason} podcastId={podcastId} />
         ))}
        
+        {/* Show message if no episodes found */}
         {episodes.length === 0 && <div className="podcast-detail-no-episodes">No episodes found for this season.</div>}
       </div>
     </div>

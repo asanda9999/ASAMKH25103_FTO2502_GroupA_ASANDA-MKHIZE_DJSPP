@@ -13,6 +13,7 @@ export default function EpisodeCard({ ep, idx, currentSeason, podcastId, podcast
   // Compose a unique key for the episode
   const episodeKey = `${podcastId}-${currentSeason.season}-${ep.episode}`;
 
+  // Handler to play the selected episode
   const handlePlay = () => {
     setCurrentAudio({
       episode: ep,

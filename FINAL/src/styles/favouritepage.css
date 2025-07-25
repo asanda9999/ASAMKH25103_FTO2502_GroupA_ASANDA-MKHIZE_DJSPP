@@ -116,6 +116,13 @@
   margin: 4px 0;
 }
 
+body.dark-theme .favourites-episode-card {
+  background: var(--dark-card) !important;
+}
+body.dark-theme .favourites-episode-description {
+  color: var(--dark-text-secondary) !important;
+}
+
 @media (max-width: 768px) {
   .favourites-page {
     padding: 10px;

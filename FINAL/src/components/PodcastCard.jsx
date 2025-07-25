@@ -23,12 +23,16 @@ export default function PodcastCard({ podcast, genres }) {
    
     <Link to={`/podcast/${podcast.id}/${slugify(podcast.title)}`} className={styles.cardLink}>
       <div className={`${styles.card} card`}>
+        {/* Podcast image and title */}
         <img src={podcast.image} alt={podcast.title} />
         <h3>{podcast.title}</h3>
+        {/* Number of seasons */}
         <p className={`${styles.seasons} seasons`}>
           {podcast.seasons} seasons
         </p>
+        {/* Genre tags */}
         <div className={styles.tags}>{genreSpans}</div>
+        {/* Last updated date */}
         <p className={`${styles.updatedText} updatedText`}>
           Updated {formatDate(podcast.updated)}
         </p>

@@ -6,6 +6,7 @@ import styles from "../styles/Pagination.module.css";
  * Numeric pagination bar.
  */
 export default function Pagination() {
+  // Get current page, setter, and total pages from context
   const { page, setPage, totalPages } = useContext(PodcastContext);
 
   if (totalPages <= 1) return null;
@@ -13,10 +14,12 @@ export default function Pagination() {
   /**
    * Build page list.
    */
+  // Create an array of page numbers
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
     <div className={styles.paginationWrapper}>
+      {/* Render a button for each page */}
       {pages.map((p) => (
         <button
           key={p}

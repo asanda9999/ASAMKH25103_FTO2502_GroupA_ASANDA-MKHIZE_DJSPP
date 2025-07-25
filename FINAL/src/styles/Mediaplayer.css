@@ -16,28 +16,28 @@ body.dark-theme .favourites-episode-card {
   } 
   
   body.dark-theme .rhap_container {
-    background: #232b36;
-    color: #fff;
+    background: #232b36 !important;
+    color: #fff !important;
   }
   body.dark-theme .rhap_time, 
   body.dark-theme .rhap_current-time, 
   body.dark-theme .rhap_total-time {
-    color: #fff;
+    color: #fff !important;
   }
   body.dark-theme .rhap_progress-indicator, 
   body.dark-theme .rhap_progress-filled {
-    background: #888;
+    background: #888 !important;
   }
   body.dark-theme .rhap_progress-bar {
-    background: #444;
+    background: #444 !important;
   }
   body.dark-theme .rhap_main-controls-button, 
   body.dark-theme .rhap_volume-button {
-    background: #232b36;
-    color: #fff;
+    background: #232b36 !important;
+    color: #fff !important;
   }
   body.dark-theme .rhap_header {
-    color: #fff;
+    color: #fff !important;
   } 
 
 @media (max-width: 768px) {

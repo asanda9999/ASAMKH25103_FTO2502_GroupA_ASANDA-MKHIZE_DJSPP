@@ -19,8 +19,10 @@ import { useContext } from "react";
  * @returns {JSX.Element} A grid of <PodcastCard> components or a message if no results are found
  */
 export default function PodcastGrid({ genres }) {
+  // Get filtered and paginated podcasts from context
   const { podcasts } = useContext(PodcastContext);
   if (!podcasts.length) {
+    // Show message if no podcasts match filters
     return (
       <p className={styles.noResults}>
         No podcasts match your search or filters.
@@ -30,6 +32,7 @@ export default function PodcastGrid({ genres }) {
   return (
     <>
       <div className={styles.grid}>
+        {/* Render a PodcastCard for each podcast */}
         {podcasts.map((podcast) => (
           <PodcastCard key={podcast.id} podcast={podcast} genres={genres} />
         ))}

@@ -6,10 +6,14 @@ import '../styles/globalAudioPlayer.css';
 import { FaBackward, FaForward } from 'react-icons/fa';
 
 export default function GlobalAudioPlayer() {
+  // Get current audio info from context
   const { currentAudio } = useAudioPlayer();
+  // Ref to the audio player instance
   const playerRef = useRef(null);
+  // Ref to track if audio is playing (for unload warning)
   const isPlayingRef = useRef(false);
 
+  // Warn user before leaving if audio is playing
   useEffect(() => {
     const handleBeforeUnload = (e) => {
       if (isPlayingRef.current) {
@@ -24,8 +28,10 @@ export default function GlobalAudioPlayer() {
 
   if (!currentAudio) return null;
 
+  // Choose the best image to display for the current audio
   const displayImage = currentAudio.image || currentAudio.episode?.image || currentAudio.podcast?.image;
 
+  // Rewind 15 seconds
   const handleRewind = () => {
     const audio = playerRef.current?.audio?.current;
     if (audio) {
@@ -33,6 +39,7 @@ export default function GlobalAudioPlayer() {
     }
   };
 
+  // Forward 30 seconds
   const handleForward = () => {
     const audio = playerRef.current?.audio?.current;
     if (audio) {
@@ -57,6 +64,7 @@ export default function GlobalAudioPlayer() {
             autoPlay
             showJumpControls={false}
             customAdditionalControls={[]}
+            // Add custom rewind/forward buttons
             customControlsSection={[
               <button key="rewind" onClick={handleRewind} aria-label="Rewind 15 seconds" style={{ background: 'none', border: 'none', color: 'inherit', fontSize: 20, cursor: 'pointer', margin: '0 8px' }}>
                 <FaBackward />
@@ -66,12 +74,14 @@ export default function GlobalAudioPlayer() {
                 <FaForward />
               </button>
             ]}
+            // Show episode and podcast title in header
             header={
               <div>
                 <strong>{currentAudio.episode?.title || 'Episode Title'}</strong>
                 <div style={{ fontSize: '0.9em', color: '#666' }}>{currentAudio.podcast?.title || ''}</div>
               </div>
             }
+            // Track play/pause/end for unload warning
             onPlay={() => { isPlayingRef.current = true; }}
             onPause={() => { isPlayingRef.current = false; }}
             onEnded={() => { isPlayingRef.current = false; }}
